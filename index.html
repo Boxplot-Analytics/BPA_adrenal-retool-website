@@ -14,35 +14,54 @@
     </head>
     <body>
         <div class="d-flex" id="wrapper">
-            <!-- Sidebar-->
-            <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light">Select Service</div>
-                <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="modifier.html">Modifier</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="uploader.html">Uploader</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="viewer.html">Viewer</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="exporter.html">Exporter</a>
-                </div>
-            </div>
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
                 <!-- Top navigation-->
-                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                    <div class="container-fluid">
-                        <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+                <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom"> -->
+                <!--     <div class="container-fluid"> -->
+                <!--         <button class="btn btn-primary" id="sidebarToggle">Menu</button> -->
+                <!--         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> -->
+                <!--         <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+                <!--             <ul class="navbar-nav ms-auto mt-2 mt-lg-0"> -->
+                <!-- <li><a class="navbar-brand" href="#"> <img src="assets/Adrenal-Logo_Icon-Orange.png" width="5%" height="5%" class="d-inline-block align-top" alt=""> Bootstrap </a></li> -->
+                <!--                 <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> -->
+                <!--             </ul> -->
+                <!--         </div> -->
+                <!--     </div> -->
+                <!-- </nav> -->
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="assets/Adrenal-Logo_Horiz-WhiteOrange.png" alt="adrenal" width="25%">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Select Tool
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="list-group-item list-group-item-action list-group-item-light p-3" href="modifier.html">Modifier</a></li>
+                    <li><a class="list-group-item list-group-item-action list-group-item-light p-3" href="uploader.html">Uploader</a></li>
+                    <li><a class="list-group-item list-group-item-action list-group-item-light p-3" href="viewer.html">Viewer</a></li>
+                    <li><a class="list-group-item list-group-item-action list-group-item-light p-3" href="exporter.html">Exporter</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
                 <!-- Page content-->
                 <div class="container-fluid mx-auto">
                     <h1 class="mt-4 mx-5 my-2">Data Management for Amazon Services</h1>
                     <p class="my-3 mx-5">
-            Use this website to interact with the Adrenal database. Navigate to the appropriate page using the sidebar (click the <em>Toggle Menu</em> button to open). Here is an overview of what each page does: </p>
+            Use this website to interact with the Adrenal database. Navigate to the appropriate page using the sidebar (click the <em>Menu</em> button to open). Here is an overview of what each page does: </p>
                     <li class="mx-5 my-3"><strong>Viewer</strong> - An embedded dashboard used for finding, filtering, & viewing data.</li>
                     <li class="mx-5 my-3"><strong>Modifier</strong> - An embedded application used for finding modifying a single record in the database. </li>
                     <li class="mx-5 my-3"><strong>Uploader</strong> - An embedded application used for uploading a strictly formatted CSV file for bulk insertion to (or bulk modification of) the database. </li>
