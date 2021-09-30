@@ -1,50 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Data Management | Adrenal</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <!-- External JS: Retool -->
-        <script src="https://cdn.tryretool.com/embed.js"> </script>
-    </head>
-    <body>
-        <div class="d-flex" id="wrapper">
-            <!-- Sidebar-->
-            <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light">Select Service</div>
-                <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="modifier.html">Modifier</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="uploader.html">Uploader</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="viewer.html">Viewer</a>
-                </div>
-            </div>
-            <!-- Page content wrapper-->
-            <div id="page-content-wrapper">
-                <!-- Top navigation-->
-                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                    <div class="container-fluid">
-                        <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-                <!-- Page content-->
-                <div class="container-fluid mx-auto">
-                    <h1 class="mt-4 mx-5 my-2">Uploader</h1>
-                    <div id="container" class="container-fluid" style="height: 800px; width: 100%;"></div>
-                </div>
-            </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Data Management | Adrenal</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+  <!-- External JS: Retool -->
+  <script src="https://cdn.tryretool.com/embed.js"> </script>
+</head>
+<body>
+  <div class="d-flex" id="wrapper">
+  <!-- Sidebar-->
+  <div class="border-end bg-white" id="sidebar-wrapper">
+    <div class="sidebar-heading border-bottom bg-light">Select Service</div>
+    <div class="list-group list-group-flush">
+      <a class="list-group-item list-group-item-action list-group-item-light p-3" href="modifier.html">Modifier</a>
+      <a class="list-group-item list-group-item-action list-group-item-light p-3" href="uploader.html">Uploader</a>
+      <a class="list-group-item list-group-item-action list-group-item-light p-3" href="viewer.html">Viewer</a>
+    </div>
+  </div>
+  <!-- Page content wrapper-->
+  <div id="page-content-wrapper">
+    <!-- Top navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container-fluid">
+        <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+          </ul>
         </div>
+      </div>
+    </nav>
+    <!-- Page content-->
+    <div class="container-fluid mx-auto">
+      <h1 class="mt-4 mx-5 my-2">Uploader</h1>
+      <p class="my-3 mx-5">You can find instructions on how to use the Bulk Uploader tool at the bottom of this page.</p>
+      <p class="my-3 mx-5">You&#8217;ll need your username and password to use the Uploader Tool. If you don&#8217;t have access to the tool, please contact Boxplot at barb@boxplotanalytics.com.</p>
+      <div id="container" class="container-fluid" style="height: 800px; width: 100%;"></div>
+    </div>
+    <div class="mt-4 mx-5 my-2">
+      <h2>How to Use the Bulk Uploader</h2>
+      <p>This short walkthrough will show you how to use the Bulk Uploader app in order to bulk insert many records into the database. There are two main sections:</p>
+      <ol><li>How do I create a CSV file?</li><li>What happens if something goes wrong?</li></ol>
+      <h3>How do I create a CSV file?</h3>
+      <p>In order to use the Bulk Uploader, you’ll need to have your data in the form of a CSV file.</p>
+      <div class="alert alert-warning" role="alert">
+            <p><strong>NOTE: </strong>You will&nbsp;<strong>NOT</strong>&nbsp;be able to upload an Excel file through the Bulk Uploader! These are files that end with the extension&nbsp;<code>.xls</code>&nbsp;or&nbsp;<code>.xlsx</code>. You&nbsp;<strong>MUST</strong>&nbsp;convert your file to a CSV file&nbsp;<em>before</em>&nbsp;using the uploader. The new file extension will be&nbsp;<code>.csv</code>.</p>
+      </div>
+      <p>Fortunately, it’s extremely quick and easy to take an Excel spreadsheet and turn it into a CSV file. This section will walk you through those steps.</p>
+      <h3 id="check-your-spreadsheet">Check Your Spreadsheet</h3>
+
+<p>Before you convert your spreadsheet to a CSV file, you’ll want to check your file for to be sure that the data you’re uploading is as accurate as possible in order to avoid any errors.</p>
+
+<p>At the top of this page, you’ll find a link to, <code>test-data.csv</code>, which is an example&nbsp;file that you can use to ensure your data is properly formatted.</p>
+
+<p>Here are some things to keep in mind:</p>
+
+<h4><strong>1. Check the ASIN.</strong>&nbsp;</h4>
+
+<p>Each row&nbsp;<em>must</em>&nbsp;have an ASIN, as this is what the database will use to identify items. For new items, make sure the ASIN is&nbsp;<strong>unique</strong>; in other words, the ASIN cannot already be in use by another product. If you want to update an item, them check that the ASIN you have is indeed the correct one for that item.</p>
+
+<div class="alert alert-info" role="alert">
+<p><strong>NOTE: The Bulk Uploader will automatically overwrite the rows for any existing ASIN you upload to it.</strong>&nbsp;</p>
+</div>
+          <p>For example, we know that the item with the ASIN&nbsp;<code>B019M554D6&nbsp;</code>already exists in the database. Here’s what that item looks like in a CSV file (truncated for explanatory purposes):</p>
+<pre class="wp-block-code"><code>B019M554D6,"Woodstock Chimes CCSG Rainbow Makers Suncatchers Crystal Sunrise Cascade, Green",CCSG,28375270217,Active
+</code></pre>
+
+<p>Now, what if you uploaded a CSV file that had this row duplicated? For instance, this one:</p>
+
+<pre class=""><code>asin,title,sku,upc,status
+B000000000,"New Item to Upload",ABCD,12345678900,Active
+B000000001,Another New Windchime,XYZ,12345678901,Obsolete
+B019M554D6,"Woodstock Chimes CCSG Rainbow Makers Suncatchers Crystal Sunrise Cascade, Green",CCSG,28375270217,Active
+</code></pre>
+
+<p>The windchime that already exists in the database (the last row) is duplicated here. If you were to upload this CSV file to the Bulk Uploader, with the duplicated row, then the app would&nbsp;<strong>overwrite</strong>&nbsp;this row in the database. However, because the information in the new CSV file is exactly the same as what’s already in the database, no changes would be made in effect.</p>
+
+<div class="alert alert-warning" role="alert">
+            <strong>However, if you DO upload a CSV file with an existing ASIN&nbsp;<em>and</em>&nbsp;you’ve made changes to that item, the database WILL be changed!</strong>&nbsp;</div>
+              <p>For instance:</p>
+
+<pre class="wp-block-code"><code>asin,title,sku,upc,status
+B000000000,"New Item to Upload",ABCD,12345678900,Active
+B000000001,Another New Windchime,XYZ,12345678901,Obsolete
+B019M554D6,"Woodstock Chimes CCSG Rainbow Makers Suncatchers Crystal Sunrise Cascade, Green",CCSG,28375270217,Obsolete
+</code></pre>
+
+<p>Notice that, now, the&nbsp;<code>status</code>&nbsp;of the last windchime says&nbsp;<code>Obsolete</code>. At the moment, the&nbsp;<code>status</code>&nbsp;in the database is&nbsp;<code>Active</code>. If you were to upload this CSV file, then because the ASIN&nbsp;<code>B019M554D6</code>&nbsp;already exists in the database, the Bulk Uploader will&nbsp;<strong>overwrite</strong>&nbsp;the database to say that this item is now&nbsp;<code>Obsolete</code>.</p>
+
+<p>If you want to update this item, then that’s great! Otherwise, it might be safer to delete the row you don’t want to change. Always make sure that the CSV file you’re upload only contains rows that you don’t mind changing in the database.</p>
+
+<h4><strong>2. Check the status.</strong>&nbsp;</h4>
+
+<p>This should be one of two values at the time of this writing:&nbsp;<code>Active</code>&nbsp;or&nbsp;<code>Obsolete</code>. Check to be sure both are spelled correctly, as&nbsp;<code>Active</code>&nbsp;and&nbsp;<code>Atcive</code>&nbsp;are viewed as two completely different things by a computer; it won’t know that this is a spelling mistake.</p>
+
+<h4><strong>3. Check the occasion.</strong>&nbsp;</h4>
+
+<p>Similarly, you&nbsp;<em>MUST</em>&nbsp;keep the occasion to one of the existing filter values, or the uploader&nbsp;<em>will</em>&nbsp;fail. Below you’ll find a list of all values that you can use to filter by&nbsp;<code>occasion</code>. Stick to these, and don’t forget to check your spelling.</p>
+
+<table class="table table-sm table-bordered table-striped table-responsive"><thead></thead><tbody><tr><td>4th of July</td><td>Independence Day</td><td>Sports</td></tr><tr><td>Back to School</td><td>Juneteenth</td><td>St Patricks</td></tr><tr><td>Christmas</td><td>Labor Day</td><td>Star Wars</td></tr><tr><td>Cinco De Mayo</td><td>Mardi Gras</td><td>Teacher</td></tr><tr><td>Collegeint</td><td>Martin Luther King Jr. Day</td><td>Thanksgiving</td></tr><tr><td>DC Comics</td><td>Marvel</td><td>Valentines Day</td></tr><tr><td>Disney</td><td>Memorial Day</td><td>Veterans Day</td></tr><tr><td>Doctor</td><td>MLB</td><td>Wedding</td></tr><tr><td>Earth Day</td><td>MLS</td><td>Yom Kippur</td></tr><tr><td>Easter</td><td>Mothers Day</td><td>Wizzard of Oz</td></tr><tr><td>Fall</td><td>NBA</td><td>House warming</td></tr><tr><td>Fathers Day</td><td>New Born</td><td>Anniversary</td></tr><tr><td>Funeral</td><td>New Year’s Day</td><td>Sympathy</td></tr><tr><td>Graduation</td><td>NFL</td><td>Congratulations</td></tr><tr><td>Grandparents</td><td>NHL</td><td></td></tr><tr><td>Halloween</td><td>Passover</td><td></td></tr><tr><td>Hanukkah</td><td>Presidents Day</td><td></td></tr><tr><td>Harry Potter</td><td>Rosh Hashanah</td><td></td></tr></tbody></table>
+
+<h4><strong>4. Check the category.</strong>&nbsp;</h4>
+
+<p>This is the same as #3. Use the list below to identify what values are in current use. You must stick to these, or else the upload will fail. Don’t forget to check your spelling.</p>
+
+<table class="table table-sm table-bordered table-striped table-responsive"><thead></thead><tbody><tr><td>Adult Costume</td><td>Home Décor</td><td>Outdoor</td></tr><tr><td>Baby</td><td>Journal</td><td>Office Products</td></tr><tr><td>Balloons</td><td>Kitchen</td><td>Outdoor Décor</td></tr><tr><td>Bathroom Décor</td><td>Kitchen Décor</td><td>Paper Cups</td></tr><tr><td>Beauty</td><td>Kitchen Tools</td><td>Paper Plates</td></tr><tr><td>Bedding</td><td>Kits &amp; Sets</td><td>Pens</td></tr><tr><td>Calendars</td><td>Lamos</td><td>Pet Costume</td></tr><tr><td>Candle</td><td>Lamp Shades</td><td>Pillow</td></tr><tr><td>Child Costume</td><td>Lamps</td><td>Signs</td></tr><tr><td>Coffee Mug</td><td>Lawn and Garden</td><td>Sports</td></tr><tr><td>Costume Accessories</td><td>Lighting</td><td>Stationary</td></tr><tr><td>Flooring</td><td>Make-Up</td><td>Tools</td></tr><tr><td>Games</td><td>Mask</td><td>Tote Bags</td></tr><tr><td>Glasses and Cups</td><td>Multi-Tool</td><td>Toy</td></tr><tr><td>Halloween Décor</td><td>Napkins</td><td>Windchime</td></tr><tr><td>Holiday Décor</td><td>Notepad</td><td></td></tr></tbody></table>
+
+<h4><strong>5. Check the data types.</strong>&nbsp;</h4>
+
+<p>The database has very strict rules on what kinds of things you can put into the cells. For example, some columns&nbsp;<strong>MUST</strong>&nbsp;have a number in them, even if that number is 0. If there’s only an empty cell where the database is expecting an explicit number&nbsp;<code>0</code>, the Bulk Uploader will&nbsp;<em>NOT</em>&nbsp;work.</p>
+
+<p>Here’s a list of all columns that&nbsp;<em>must</em>&nbsp;have a&nbsp;<strong>0</strong>&nbsp;in any empty cells:</p>
+
+<table class="table table-sm table-bordered table-striped table-responsive"><thead></thead><tbody><tr><td>packaged_height</td><td>product_weight</td></tr><tr><td>packaged__weight</td><td>product_width</td></tr><tr><td>product_length</td><td>product_height</td></tr><tr><td>inner_pack_qty</td><td>packaged_width</td></tr><tr><td>moq</td><td>packaged__length</td></tr><tr><td>case_pack_qty</td><td>items_per_inner_pack</td></tr></tbody></table>
+
+<h3 id="check-your-spreadsheet">Create Your CSV File</h3>
+
+<p>Once you’ve confirmed that your spreadsheet is in the correct format and contains only the data you want inserted or changed, it’s time to convert it to a CSV file.</p>
+
+<p>In Excel, this process is extremely simple. The following excerpt from the&nbsp;<a href="https://support.microsoft.com/en-us/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba">official Microsoft documentation</a>&nbsp;explains how to do this:</p>
+
+					<blockquote><p>You can convert an Excel worksheet to a text file by using the Save As command.</p>
+						<ol><li>Go to File &gt; Save As.</li><li>Click Browse.</li><li>In the Save As dialog box, under Save as type box, choose the text file format for the worksheet; for example, click Text (Tab delimited) or CSV (Comma delimited).Note: The different formats support different feature sets. For more information about the feature sets that are supported by the different text file formats, see File formats that are supported in Excel.</li><li>Browse to the location where you want to save the new text file, and then click Save.</li><li>A dialog box appears, reminding you that only the current worksheet will be saved to the new file. If you are certain that the current worksheet is the one that you want to save as a text file, click OK. You can save other worksheets as separate text files by repeating this procedure for each worksheet.</li></ol><p>You may also see an alert below the ribbon that some features might be lost if you save the workbook in a CSV format.</p><footer><cite><a href="https://support.microsoft.com/en-us/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba">Import or Export CSV Files | Microsoft Support</a></cite></footer></blockquote>
+
+<h3 id="check-your-spreadsheet">Upload Your CSV File</h3>
+
+<p>Now that you have your data saved as a CSV file, it’s time to&nbsp;<strong>upsert</strong>&nbsp;(update or insert) the records into the database!</p>
+
+<figure class=""><video controls src="https://www.boxplotanalytics.com/wp-content/uploads/2021/09/adrenal-bulk-upload-tool-screencast_upload-a-file.mp4"></video></figure>
+
+<ol><li>Navigate to the Bulk Uploader tool on the website and look for the section titled “Data to upload.”</li><li>Click the grey button to upload a CSV.</li><li>Select the CSV file you want to upload to the database.</li><li>Check the rendered table to confirm the data was read in properly.</li><li>Click the green button to upload the data to the database.</li></ol>
+
+<p>If everything goes well, the message box below this button will say “Uploading CSV file” and display a green check mark. Otherwise, it will show a red X and read, “Error processing CSV file.” If this happens, then continue on to the section below for more information on how to troubleshoot errors. Note that if your CSV file contains an error, then the query won&#8217;t execute, and no changes will be made to the database. This gives you a chance to make changes and try again, while minimizing the chances of data loss.</p>
+
+<h2>What happens if something goes wrong?</h2>
+
+<p>Sometimes, errors will pop up, even when you thought you’d taken all the necessary steps to prevent them. This section will help you to troubleshoot should any issues arise.</p>
+
+<h3>How will I know what went wrong?</h3>
+
+<p>Beneath the green button that says “Upload data,” you’ll find a message box that will tell you the status of your upload. If something goes wrong, this box will read “Error processing CSV file” and display details of the error message.</p>
+
+<figure class=""><video controls src="https://www.boxplotanalytics.com/wp-content/uploads/2021/09/adrenal-bulk-upload-tool-screencast_error-1.mp4"></video></figure>
+
+<div class="alert alert-info" role="alert">
+<p class="has-medium-font-size"><strong>Note:</strong> If your CSV file contains an error, then the query won&#8217;t execute, and no changes will be made to the database. This gives you a chance to make changes and try again, while minimizing the chances of data loss.</p>
+					</div>
+<p>These details come straight from the database, so they can be quite technical in nature. For your convenience, we’ve translated these error messages into actionable steps you can take in the event that you encounter one of them. Start by reading through the sections below. Locate the error message that’s as close to the one that you’re seeing in the message box and read the section for info on what it means and what you should do.</p>
+
+<h3 id="error%3A-duplicate-key-value-violates-unique-constraint">Error: duplicate key value violates unique constraint</h3>
+
+<p><strong>What it means:</strong>&nbsp;This error message says that you’re trying to upload a CSV file with an item that already exists in the database. However, the Bulk Uploader should be configured to allow you to do this; the row will simply be replaced, and either overwritten with new changes or overwritten with no effective changes made. If you’re seeing this error, then that means something is wrong with the application configuration, not your CSV file.</p>
+
+					<div class="alert alert-success" role="alert">
+<p><strong>What to do:</strong>&nbsp;Contact Boxplot at&nbsp;<a href="mailto:barb@boxplotanalytics.com">barb@boxplotanalytics.com</a>&nbsp;and let them know you encountered this problem. There’s nothing else for you to do; this is something that can only be fixed on the back end.</p>
+					</div>
+<h3 id="error%3A-null-value-in-column-%E2%80%9Casin%E2%80%9D-of-relation-%E2%80%9Cwoodstock%E2%80%9D-violates-not-null-constraint">Error: null value in column “asin” of relation “woodstock” violates not-null constraint</h3>
+
+<p><strong>What it means:</strong>&nbsp;<code>null</code>&nbsp;is a programmatic word for the concept of something being missing. In other words, there’s a row in your CSV file that is missing an ASIN. It may even mean that the ASIN column is missing completely, though this is unlikely. (That’s the only column that this error should show up for—if the column name is different, please contact Boxplot at&nbsp;<a href="mailto:barb@boxplotanalytics.com">barb@boxplotanalytics.com</a>.)</p>
+
+					<div class="alert alert-success" role="alert">
+<p><strong>What to do:</strong>&nbsp;Check and make sure that your CSV file contains a column titled&nbsp;<code>asin</code>, and that every row has an ASIN in it. Don’t forget—if there’s a row with an ASIN that’s already in the database, then using the Bulk Uploader will effectively overwrite this row in the database with whatever new information you upload to it.</p>
+					</div>
+
+<h3 id="error%3A-column-%E2%80%9Cbsin%E2%80%9D-of-relation-%E2%80%9Cwoodstock%E2%80%9D-does-not-exist">Error: column “bsin” of relation “woodstock” does not exist</h3>
+
+<p><strong>What it means:</strong>&nbsp;You’re trying to upload a CSV file with a column that the database doesn’t know about. In this example, the ASIN column has a typo in it, rendering the spelling &#8220;bsin&#8221; which is not an available column. The database is highly structured, and as such your CSV file needs to follow a strict template in order to interact with it. If you’re seeing this error message, then your CSV file has an extra column that’s not in the database.</p>
+
+					<div class="alert alert-success" role="alert">
+<p><strong>What to do:</strong>&nbsp;Remove the column from your spreadsheet and try to upload the data again.</p>
+					</div>
+
+<h3 id="error%3A-invalid-input-syntax-for-type-integer%3A-%E2%80%9C%E2%80%9D">Error: invalid input syntax for type integer: “”</h3>
+
+<p><strong>What it means:</strong>&nbsp;One of your columns requires a&nbsp;<strong>numeric value</strong>&nbsp;to be in the cell, but you either have a word there instead or nothing.</p>
+
+					<div class="alert alert-success" role="alert">
+<p><strong>What to do:</strong>&nbsp;Make sure that all columns that are numeric in nature have a&nbsp;<strong>0</strong>&nbsp;in each empty cell. Otherwise, the Uploader will not be able to parse your file.</p>
+					</div>
+
+<p>Here’s a list of all columns that&nbsp;<em>must</em>&nbsp;have a&nbsp;<strong>0</strong>&nbsp;in any empty cells:</p>
+
+<table class="table table-sm table-bordered table-striped table-responsive"><thead></thead><tbody><tr><td>packaged_height</td><td>product_weight</td></tr><tr><td>packaged__weight</td><td>product_width</td></tr><tr><td>product_length</td><td>product_height</td></tr><tr><td>inner_pack_qty</td><td>packaged_width</td></tr><tr><td>moq</td><td>packaged__length</td></tr><tr><td>case_pack_qty</td><td>items_per_inner_pack</td></tr></tbody></table>
+
+
+				</div>
+			</div>
+		</div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
