@@ -60,9 +60,16 @@
                 <!-- Page content-->
                 <div class="container-fluid mx-auto">
                     <h1 class="mt-4 mx-5 my-2">Modifier</h1>
+      <p class="my-3 mx-5">You can find instructions on how to use this tool at the bottom of this page.</p>
       <p class="my-3 mx-5">You&#8217;ll need your username and password to use the Modifier Tool. If you don&#8217;t have access to the tool, please contact Boxplot at barb@boxplotanalytics.com.</p>
                     <div id="container" class="container-fluid" style="height: 800px; width: 100%;"></div>
                 </div>
+    <div class="mt-4 mx-5 my-2">
+      <h2>How to Use the Modifier App</h2>
+          <p><strong>Viewing data.</strong> To view data stored in the database, use the filters in the top section of the app, appearing above the table. For example, if you wanted to see all inventory items with a vendor code of WOOV9, choose “WOOV9” in the Filter By Vendor Code section. “And” logic is applied across all filters; for example, if you select “WOOV9” in the Filter By Vendor Code section and “Active” in the Filter By Status section, this will show you all of the inventory items with vendor code WOOV9 AND Active status (as opposed to showing you the inventory items with vendor code WOOV9 OR Active status). Per Adrenal’s request, no data will appear in the table until at least one filter is utilized.</p>
+          <p><strong>Editing data points one at a time.</strong>  To edit data points one at a time, first apply any desired filter(s) that will allow you to see the data that you want to edit. Then, simply select the cell(s) with the value(s) that you want to change and type over the old value with the new one. When you’ve made all edits that you want to make, click the Save Changes button at the bottom left of the table. Note that the Occasion columns have restrictions in place that will only allow certain values to be entered; it will reject updates if the updated value does not comply with the restrictions.</p>
+          <p><strong>Editing data in bulk.</strong>  If you want to update a lot of values in a particular column or columns to a specific replacement value, utilize the bulk edit functionality that we’ve built into your app. To do that, first apply the filter(s) as described in (1) to show only the rows containing the subset of values that you want to update all at once. Next, fill in the intended replacement value(s) into the proper box(es) in the section below the table, according to the column(s) in which you’re trying to update values. Finally, click the blue button next to each box where you’ve filled in a replacement value. The app will now update all of these values at once.</p>
+            </div>
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
