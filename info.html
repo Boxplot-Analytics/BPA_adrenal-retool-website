@@ -10,13 +10,14 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/main.css" rel="stylesheet" />
     </head>
     <body>
         <div class="d-flex" id="wrapper">
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
                 <!-- Top navigation-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">
       <img src="assets/Adrenal-Logo_Horiz-WhiteOrange.png" alt="adrenal" width="25%">
@@ -36,7 +37,7 @@
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <li><a class="list-group-item list-group-item-action list-group-item-light p-3" href="modifier.html">Modifier</a></li>
                     <li><a class="list-group-item list-group-item-action list-group-item-light p-3" href="uploader.html">Uploader</a></li>
-                    <li><a class="list-group-item list-group-item-action list-group-item-light p-3" href="viewer.html">Viewer</a></li>
+                    <li><a class="list-group-item list-group-item-action list-group-item-light p-3" href="index.html">Viewer</a></li>
                     <li><a class="list-group-item list-group-item-action list-group-item-light p-3" href="exporter.html">Exporter</a></li>
           </ul>
         </li>
@@ -46,10 +47,14 @@
 </nav>
                 <!-- Page content-->
                 <div class="container-fluid mx-auto">
-                    <h1 class="mt-4 mx-5 my-2">Viewer</h1>
-          <p class="mt-4 mx-5 my-2">Use the arrows at the bottom of the screen to navigate between dashboard pages.</p>
+                    <h1 class="mt-4 mx-5 my-2">Data Management for Amazon Services</h1>
+                    <p class="my-3 mx-5">
+            Use this website to interact with the Adrenal database. Navigate to the appropriate page using the sidebar (click the <em>Menu</em> button to open). Here is an overview of what each page does: </p>
+                    <li class="mx-5 my-3"><strong>Viewer</strong> - An embedded dashboard used for finding, filtering, & viewing data.</li>
+                    <li class="mx-5 my-3"><strong>Modifier</strong> - An embedded application used for finding modifying a single record in the database. </li>
+                    <li class="mx-5 my-3"><strong>Uploader</strong> - An embedded application used for uploading a strictly formatted CSV file for bulk insertion to (or bulk modification of) the database. </li>
+          <li class="mx-5 my-3"><strong>Exporter</strong> - A tool for exporting data to Excel, PDF, etc. as needed.</li>
                 </div>
-                    <iframe width="100%" height="800px" src=https://app.powerbi.com/view?r=eyJrIjoiY2FjMjI1MDgtMzU3Yi00OTNkLThjYTQtZDlkMTAxZmZkMzc0IiwidCI6IjhhOGQxZGUyLTg3YjgtNDY3YS1hMTlmLTI0OTRkMjA1YjdhOCIsImMiOjJ9 frameborder="0" allowFullScreen="true"></iframe>
             </div>
         </div>
         <!-- Bootstrap core JS-->
